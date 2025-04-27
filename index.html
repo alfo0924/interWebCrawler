@@ -1,48 +1,56 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>國際新聞爬蟲</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="background-animation"></div>
+<div class="gradient-background"></div>
 
 <header>
     <div class="container">
-        <h1>國際新聞速覽</h1>
-        <p class="subtitle">即時掌握全球動態</p>
+        <h1><i class="fas fa-globe"></i> 國際新聞即時爬蟲</h1>
+        <p class="subtitle">自動抓取Google最新國際新聞</p>
     </div>
 </header>
 
 <main class="container">
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="搜尋新聞...">
-        <button id="searchButton">搜尋</button>
-    </div>
-
-    <div class="categories">
-        <button class="category-btn active" data-category="all">全部</button>
-        <button class="category-btn" data-category="politics">政治</button>
-        <button class="category-btn" data-category="economy">經濟</button>
-        <button class="category-btn" data-category="society">社會</button>
-        <button class="category-btn" data-category="technology">科技</button>
+    <div class="control-panel">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="搜尋新聞關鍵字...">
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="filter-options">
+            <select id="categoryFilter">
+                <option value="all">所有分類</option>
+                <option value="world">世界</option>
+                <option value="business">商業</option>
+                <option value="technology">科技</option>
+                <option value="entertainment">娛樂</option>
+                <option value="sports">體育</option>
+                <option value="science">科學</option>
+                <option value="health">健康</option>
+            </select>
+            <button id="refreshBtn" class="refresh-btn"><i class="fas fa-sync-alt"></i> 重新整理</button>
+        </div>
     </div>
 
     <div class="news-container" id="newsContainer">
         <div class="loading">
             <div class="spinner"></div>
-            <p>載入新聞中...</p>
+            <p>正在載入最新新聞...</p>
         </div>
     </div>
 </main>
 
 <footer>
     <div class="container">
-        <p>© 2025 國際新聞爬蟲 | 資料來源: Google 新聞</p>
-        <p class="disclaimer">本網站僅供學習和研究使用，所有新聞內容版權歸原作者所有</p>
+        <p>&copy; 2025 國際新聞爬蟲 | 資料來源: Google News</p>
+        <p class="disclaimer">本網站僅供學習用途，所有新聞內容版權歸原作者所有</p>
     </div>
 </footer>
 
