@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>國際新聞爬蟲</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="gradient-background"></div>
+
+<header>
+    <div class="container">
+        <h1>國際新聞爬蟲</h1>
+        <p class="subtitle">即時掌握全球最新動態</p>
+    </div>
+</header>
+
+<main class="container">
+    <section class="search-section">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="搜尋關鍵字...">
+            <button id="searchButton">搜尋</button>
+        </div>
+        <div class="filter-container">
+            <select id="categoryFilter">
+                <option value="all">所有類別</option>
+                <option value="world">世界</option>
+                <option value="business">商業</option>
+                <option value="technology">科技</option>
+                <option value="science">科學</option>
+                <option value="health">健康</option>
+            </select>
+            <select id="sortOrder">
+                <option value="newest">最新優先</option>
+                <option value="relevance">相關性優先</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="news-container">
+        <div class="loading" id="loadingIndicator">
+            <div class="spinner"></div>
+            <p>正在獲取最新新聞...</p>
+        </div>
+        <div id="newsResults"></div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2025 國際新聞爬蟲 | 資料來源：Google News</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
